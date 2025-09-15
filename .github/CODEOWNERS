@@ -1,0 +1,23 @@
+# CODEOWNERS
+# Lines that start with # are comments.
+# Format: <pattern> <owner> [owner...]
+# Owners can be GitHub usernames (e.g. @goobil) or teams (e.g. @org/team-name).
+# Update these entries to match your org/team as needed.
+
+# Docs and markdown
+docs/ @goobil
+*.md @goobil
+
+# GitHub workflow and CI config
+.github/workflows/ @goobil
+.github/markdownlint.json @goobil
+
+# Infrastructure and security rules
+firestore/** @goobil
+functions/** @goobil
+
+# Scripts and tooling
+scripts/** @goobil
+
+# Default: code owners for the repository root
+/.github/ @goobil
