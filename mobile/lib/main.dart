@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+// Note: you must provide native Firebase configuration files for Android (google-services.json)
+// and iOS (GoogleService-Info.plist) in the respective platform folders before running.
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -29,7 +35,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('ANU Events'),
       ),
-      body: const Center(child: Text('Home feed scaffold - implement cards here')),
+      body: const Center(child: Text('Home feed scaffold - Firebase initialized')),
     );
   }
 }
