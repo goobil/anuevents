@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "anuevents-local",
+    "production": "anuevents-1f30d"
+  }
+}
