@@ -5,3 +5,7 @@ This folder contains a minimal Flutter app scaffold to start building Phase 1 (M
 To run:
 - Install Flutter SDK separately (not included in repo)
 - From this folder: `flutter pub get` and `flutter run`
+
+Firebase setup:
+- The FlutterFire CLI generated `lib/firebase_options.dart` for this project. This file is safe to commit.
+- Native Firebase config files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS) are placed locally by the FlutterFire CLI at `android/app/google-services.json` and `ios/Runner/GoogleService-Info.plist` respectively. These files are intentionally ignored by `.gitignore` to avoid leaking project credentials.
