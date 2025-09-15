@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563497241493",
+    "project_id": "anuevents-1f30d",
+    "storage_bucket": "anuevents-1f30d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563497241493:android:1221b973cac976e3ab449c",
+        "android_client_info": {
+          "package_name": "com.goobil.anuevents"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXQOqKGpAFA8m0jMxK-b5DWW6szPZPNvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
