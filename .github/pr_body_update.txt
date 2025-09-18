@@ -1,0 +1,31 @@
+Adds interests onboarding and a client-side recommended feed.
+
+What:
+- Adds `OnboardingInterestsScreen` to capture `users/{userId}.prefs.travelInterests`.
+- Persists interests via `FirestoreService.saveUserInterests`.
+- Adds a Recommended strip to `HomeScreen` that ranks events by tag intersection with user interests (client-side).
+- Extends `Event` model to include `tagIds`.
+- Adds `userProfileProvider` to stream user profile doc and converts it to a typed `UserProfile` model consumed by `HomeScreen`.
+
+Files changed in this PR (high-level):
+- mobile/lib/screens/onboarding_interests_screen.dart (new) — onboarding UI to choose interests.
+- mobile/lib/services/firestore_service.dart — adds `saveUserInterests`.
+- mobile/lib/models/event.dart — adds `tagIds`.
+- mobile/lib/models/user_profile.dart (new) — typed `UserProfile` model.
+- mobile/lib/providers/auth_provider.dart — `userProfileProvider` now streams `UserProfile?`.
+- mobile/lib/screens/home_screen.dart — reads typed profile.travelInterests to compute client-side recommendations.
+
+Why:
+- Small, measurable engagement improvement. This is an MVP recommender that validates interest-driven recommendations without server-side infra.
+
+Testing:
+1. Run the app, sign in, open Home.
+2. Tap Edit on Recommended and choose interests.
+3. Confirm `users/{userId}.prefs.travelInterests` contains selected tags in Firestore.
+4. Home feed Recommended strip orders events matching chosen tags higher.
+
+Notes and Next Steps:
+- Next: server-side cached recommendations for scale and more advanced scoring (move heavy work off-device).
+- Follow-up: add lightweight unit/widget tests for `UserProfile.fromDoc` and Recommended strip rendering.
+
+Commit references included in this PR: latest commit fbe8433

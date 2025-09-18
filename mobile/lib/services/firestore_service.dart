@@ -60,6 +60,12 @@ class FirestoreService {
     });
   }
 
+  // Stream saved event IDs for a user (lightweight for UI toggles)
+  Stream<Set<String>> streamSavedEventIdsForUser(String userId) {
+    final savedRef = _db.collection('users').doc(userId).collection('saved').orderBy('savedAt');
+    return savedRef.snapshots().map((snap) => snap.docs.map((d) => d.id).toSet());
+  }
+
   // Stream pending moderation events
   Stream<List<Event>> streamPendingModeration({int limit = 100}) {
     return _db
@@ -95,6 +101,11 @@ class FirestoreService {
         'travelInterests': interests,
       }
     }, SetOptions(merge: true));
+  }
+
+  // Stream user document for profile consumption
+  Stream<DocumentSnapshot> userDocStream(String uid) {
+    return _db.collection('users').doc(uid).snapshots();
   }
 }
 
