@@ -1,3 +1,5 @@
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/event.dart';
 
@@ -84,6 +86,15 @@ class FirestoreService {
   // placeholder for poster upload metadata handling
   Future<void> attachPoster(String eventId, Map<String, dynamic> posterMeta) async {
     await _db.collection('events').doc(eventId).update({'poster': posterMeta});
+  }
+
+  // Save user interests (tags) to users/{userId}.prefs.travelInterests
+  Future<void> saveUserInterests(String userId, List<String> interests) async {
+    await _db.collection('users').doc(userId).set({
+      'prefs': {
+        'travelInterests': interests,
+      }
+    }, SetOptions(merge: true));
   }
 }
 
