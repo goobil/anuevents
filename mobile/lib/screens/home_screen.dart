@@ -77,9 +77,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 final user = ref.watch(currentUserProvider);
                 List<String> interests = [];
                 if (user != null) {
-                  final profileSnap = ref.watch(userProfileProvider(user.uid)).asData?.value;
-                  final prefs = profileSnap?.data() as Map<String, dynamic>?;
-                  interests = List<String>.from(prefs?['prefs']?['travelInterests'] ?? []);
+                  final profile = ref.watch(userProfileProvider(user.uid)).asData?.value;
+                  interests = profile?.travelInterests ?? [];
                 }
                 // score events by tag intersection with interests
                 List eventsScored = events.map((e) {

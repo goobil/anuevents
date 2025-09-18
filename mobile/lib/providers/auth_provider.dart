@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../models/user_profile.dart';
 import '../services/auth_service.dart';
 import '../services/firestore_service.dart';
 
@@ -19,7 +20,9 @@ final currentUserProvider = Provider<User?>((ref) {
 // Stream user profile document
 final firestoreServiceProvider = Provider<FirestoreService>((ref) => FirestoreService());
 
-final userProfileProvider = StreamProvider.autoDispose.family<DocumentSnapshot?, String>((ref, uid) {
+final userProfileProvider = StreamProvider.autoDispose.family<UserProfile?, String>((ref, uid) {
   if (uid.isEmpty) return const Stream.empty();
-  return FirebaseFirestore.instance.collection('users').doc(uid).snapshots();
+  final firestore = ref.read(firestoreServiceProvider);
+  final stream = firestore.userDocStream(uid);
+  return stream.map((snap) => snap == null ? null : UserProfile.fromDoc(snap));
 });
