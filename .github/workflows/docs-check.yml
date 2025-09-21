@@ -29,9 +29,18 @@ jobs:
       - name: Run markdownlint
         run: |
           echo "Running markdownlint..."
-          markdownlint "**/*.md" --config .github/markdownlint.json
+          # Use the repository ignore file to skip vendored docs (Pods, node_modules, etc.)
+          markdownlint "**/*.md" --config .github/markdownlint.json --ignore-path .markdownlintignore
 
       - name: Run link checks
         run: |
           echo "Running markdown-link-check on each markdown file..."
-          find . -name '*.md' -not -path './node_modules/*' -not -path './.git/*' -print0 | xargs -0 -n1 -P4 -I{} sh -c "markdown-link-check -q '{}' || exit 2"
+          # Exclude vendored and generated directories from link checks to reduce noise
+          find . -name '*.md' \
+            -not -path './node_modules/*' \
+            -not -path './.git/*' \
+            -not -path './mobile/ios/Pods/*' \
+            -not -path './mobile/**/Pods/*' \
+            -not -path './mobile/.vscode/*' \
+            -not -path './firebase/functions/node_modules/*' \
+            -print0 | xargs -0 -n1 -P4 -I{} sh -c "markdown-link-check -q '{}' || exit 2"

@@ -1,0 +1,7 @@
+# Ignore CocoaPods vendored docs and other generated/vendor files
+mobile/ios/Pods/**
+mobile/**/Pods/**
+firebase/functions/node_modules/**
+node_modules/**
+**/vendor/**
+/.git/**
