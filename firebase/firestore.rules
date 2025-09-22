@@ -69,8 +69,8 @@ service cloud.firestore {
             request.resource.data.keys().hasOnly(['prefs'])
             && request.resource.data.prefs is map
             && (
-              // travelInterests, if present, must be an array of strings
-              (!('travelInterests' in request.resource.data.prefs) || request.resource.data.prefs.travelInterests is list && request.resource.data.prefs.travelInterests.size() >= 0 && request.resource.data.prefs.travelInterests.every(x -> x is string))
+              // travelInterests, if present, must be a list (elements validated elsewhere if needed)
+              (!('travelInterests' in request.resource.data.prefs) || request.resource.data.prefs.travelInterests is list)
               // onboardingCompleted, if present, must be boolean
               && (!('onboardingCompleted' in request.resource.data.prefs) || request.resource.data.prefs.onboardingCompleted is bool)
             )
