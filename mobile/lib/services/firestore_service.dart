@@ -2,6 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/event.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FirestoreService {
   FirebaseFirestore? _db;
@@ -120,6 +121,13 @@ class FirestoreService {
         'onboardingCompleted': true,
       }
     }, SetOptions(merge: true));
+    // persist a local flag so we can skip prompting immediately without waiting for Firestore reads
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('onboardingCompleted_local', true);
+    } catch (_) {
+      // ignore local prefs failure; Firestore write is primary
+    }
   }
 
   // Stream user document for profile consumption

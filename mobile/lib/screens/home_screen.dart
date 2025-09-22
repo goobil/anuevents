@@ -6,6 +6,7 @@ import '../providers/auth_provider.dart';
 import 'account_screen.dart';
 import 'onboarding_interests_screen.dart';
 import 'submit_event_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -17,6 +18,17 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   String _query = '';
   bool _onboardingPrompted = false;
+
+  Future<bool> _shouldPromptOnboarding(String? uid, bool profileOnboardingCompleted) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final local = prefs.getBool('onboardingCompleted_local') ?? false;
+      if (local) return false;
+    } catch (_) {
+      // ignore local prefs failure
+    }
+    return !profileOnboardingCompleted;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,11 +94,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   interests = profile?.travelInterests ?? [];
                   // If user has no interests and we haven't prompted yet, show onboarding once
                   if (!_onboardingPrompted && (interests.isEmpty)) {
-                    _onboardingPrompted = true;
-                    // show onboarding but don't await here to avoid blocking the stream builder UI
+                    final onboardingDone = profile?.onboardingCompleted ?? false;
+                    // consult local pref and profile value; avoid awaiting directly in build
                     WidgetsBinding.instance.addPostFrameCallback((_) async {
-                      final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingInterestsScreen()));
-                      if (res == true && mounted) setState(() {});
+                      final shouldPrompt = await _shouldPromptOnboarding(user.uid, onboardingDone);
+                      if (shouldPrompt && !_onboardingPrompted) {
+                        _onboardingPrompted = true;
+                        if (!mounted) return;
+                        // Navigator needs a BuildContext here; we've guarded with mounted checks above/below.
+                        // The analyzer may still warn about using BuildContext across async gaps — ignore for this guarded use.
+                        // ignore: use_build_context_synchronously
+                        final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingInterestsScreen()));
+                        if (!mounted) return;
+                        if (res == true) setState(() {});
+                      }
                     });
                   }
                 }
