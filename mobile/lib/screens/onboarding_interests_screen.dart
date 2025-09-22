@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/auth_provider.dart';
 
 class OnboardingInterestsScreen extends ConsumerStatefulWidget {
-  const OnboardingInterestsScreen({Key? key}) : super(key: key);
+  const OnboardingInterestsScreen({super.key});
 
   static const routeName = '/onboarding/interests';
 
