@@ -113,9 +113,11 @@ class FirestoreService {
 
   // Save user interests (tags) to users/{userId}.prefs.travelInterests
   Future<void> saveUserInterests(String userId, List<String> interests) async {
+    // Also persist that onboarding was completed when interests are saved.
     await _firestore.collection('users').doc(userId).set({
       'prefs': {
         'travelInterests': interests,
+        'onboardingCompleted': true,
       }
     }, SetOptions(merge: true));
   }

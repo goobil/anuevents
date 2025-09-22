@@ -16,6 +16,7 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   String _query = '';
+  bool _onboardingPrompted = false;
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +80,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 if (user != null) {
                   final profile = ref.watch(userProfileProvider(user.uid)).asData?.value;
                   interests = profile?.travelInterests ?? [];
+                  // If user has no interests and we haven't prompted yet, show onboarding once
+                  if (!_onboardingPrompted && (interests.isEmpty)) {
+                    _onboardingPrompted = true;
+                    // show onboarding but don't await here to avoid blocking the stream builder UI
+                    WidgetsBinding.instance.addPostFrameCallback((_) async {
+                      final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingInterestsScreen()));
+                      if (res == true && mounted) setState(() {});
+                    });
+                  }
                 }
                 // score events by tag intersection with interests
                 List eventsScored = events.map((e) {
