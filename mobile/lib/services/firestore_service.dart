@@ -21,9 +21,25 @@ class FirestoreService {
   // Submit a new event (saves with status 'pending')
   Future<DocumentReference> createEvent(Map<String, dynamic> payload) async {
     payload['status'] = 'pending';
-    payload['createdAt'] = FieldValue.serverTimestamp();
-    final ref = await _firestore.collection('events').add(payload);
-    return ref;
+    // createdAt should be set server-side (Cloud Function / Firestore serverTimestamp) to
+    // avoid clients mixing FieldValue objects into plain string maps. Firestore rules
+    // and server code should apply the timestamp when creating documents.
+    try {
+      final ref = await _firestore.collection('events').add(payload);
+      // Debug: log created document id to help troubleshooting during manual tests
+      // ignore: avoid_print
+      print('FirestoreService.createEvent: created event ${ref.id}');
+      return ref;
+    } catch (e) {
+      // ignore: avoid_print
+      print('FirestoreService.createEvent: failed to create event: $e');
+      rethrow;
+    }
+  }
+
+  // Alias to create a draft/pending event with same semantics
+  Future<DocumentReference> createDraftEvent(Map<String, dynamic> payload) async {
+    return createEvent(payload);
   }
 
   // Update event (used by moderators to approve/reject)

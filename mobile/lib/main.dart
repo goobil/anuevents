@@ -5,6 +5,7 @@ import 'firebase_options.dart';
 import 'screens/home_screen.dart';
 import 'screens/auth_screen.dart';
 import 'providers/auth_provider.dart';
+import 'services/firebase_storage_service.dart';
 
 // Note: native Firebase configuration files were placed by FlutterFire CLI.
 
@@ -13,7 +14,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(ProviderScope(overrides: [
+    storageServiceProvider.overrideWithValue(FirebaseStorageService()),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

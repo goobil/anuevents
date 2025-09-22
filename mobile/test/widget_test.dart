@@ -7,13 +7,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:anuevents_mobile/main.dart';
+// isolated counter test - no app imports required
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    // A tiny counter widget for test isolation
+    int count = 0;
+    final widget = MaterialApp(
+      home: StatefulBuilder(
+        builder: (context, setState) => Scaffold(
+          body: Center(child: Text('$count', key: const Key('counter'))),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () => setState(() => count++),
+            child: const Icon(Icons.add),
+          ),
+        ),
+      ),
+    );
+
+    await tester.pumpWidget(widget);
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

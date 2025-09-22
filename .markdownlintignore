@@ -5,3 +5,6 @@ firebase/functions/node_modules/**
 node_modules/**
 **/vendor/**
 /.git/**
+
+# Ignore store copy files (marketing text) which may intentionally exceed 120 chars per line
+mobile/STORE_COPY*.md

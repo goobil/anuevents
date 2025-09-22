@@ -8,9 +8,13 @@ class UserProfile {
 
   factory UserProfile.fromDoc(DocumentSnapshot doc) {
     final data = doc.data() as Map<String, dynamic>? ?? {};
+    return UserProfile.fromData(id: doc.id, data: data);
+  }
+
+  factory UserProfile.fromData({required String id, required Map<String, dynamic> data}) {
     final prefs = data['prefs'] as Map<String, dynamic>? ?? {};
     return UserProfile(
-      id: doc.id,
+      id: id,
       travelInterests: List<String>.from(prefs['travelInterests'] ?? []),
     );
   }

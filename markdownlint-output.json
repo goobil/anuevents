@@ -1,0 +1,3346 @@
+[
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 216",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      96
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 6,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Flutter recommended for rapi...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 10,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Use Material 3 / Fluent-adja...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 15,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Preferred: Riverpod (or Bloc...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 19,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Use repository pattern with ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 23,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Use Firebase Storage with st...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 27,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Use platform maps SDKs for b...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 31,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Support OAuth providers (Goo...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 35,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Use widget/unit tests (Flutt...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 39,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Lazy-load images with placeh...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 43,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Ensure semantic labels for i...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 48,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Maintain an internal `design...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 52,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- iOS: prefer Apple Maps if us...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 56,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Provide Figma file with toke...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 60,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Create a minimal component l...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 65,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Component library scaffolded",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/cross-platform-design.md",
+    "lineNumber": 68,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      48,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 49,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 724",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      604
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 7,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 1) Personas & Roles",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 8,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 8,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 193",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      73
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 8,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Guest:** Browse, search, f...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 9,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 215",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      95
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 10,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 246",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      126
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 11,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 165",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      45
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 12,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 143",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      23
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 13,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 181",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      61
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 17,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 2) Core User Flows (MVP)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 18,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 18,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "1. **Discover → Details → Save...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 19,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 211",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      91
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 21,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 228",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      108
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 23,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 278",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      158
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 25,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 183",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      63
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 27,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 163",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      43
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 29,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 209",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      89
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 35,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.1 Home (Discover)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 36,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 36,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 36,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 36,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 49,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 50,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 50,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 155",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      35
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 52,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.2 Explore (Map + Filters + AI Guides)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 53,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 53,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 53,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 53,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 60,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 61,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 61,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 258",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      138
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 63,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.3 Event Details",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 64,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 64,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 64,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 64,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 78,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.4 Submit Event (Auth Gate with AI Assistance)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 79,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 79,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 79,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 79,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 92,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.5 Saved & Community",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 93,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 93,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Saved**: Bookmarks segment...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 96,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.6 Profile",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 97,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 97,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Avatar, display name, bio, t...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 99,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 152",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      32
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 101,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.7 Moderator Queue",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 102,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 102,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 102,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 102,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 106,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 107,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 109,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.8 Admin Console",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 110,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 110,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Overview**: Submissions, a...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 119,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 4) Information Architecture",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 120,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 120,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Spaces**: Public app (Home...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 121,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 165",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      45
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 126,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 5) Firestore Data Model",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 127,
+      "insertText": ">\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 127,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 159",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      39
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 132,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `id` (auto)",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 165,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `name`, `addressLine`, `city...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 173,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `name`, `slug`, `iconKey`",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 178,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `name`, `slug`",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 181,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `name`, `bio`, `avatarUrl`",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 188,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `displayName`, `photoURL`, `...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 196,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `eventDraft`: object (minima...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 204,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Path: `users/{userId}/bookma...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 208,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `eventId`, `reportedBy`, `re...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 211,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `slotKey`: 'home.hero'|'home...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 217,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `actorUserId`, `action`, `en...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 220,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `eventId`, `attendees`: ref[...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 223,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `rateLimits`: { submissionsP...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 227,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 5.2 Indexing (Composite Examples)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 228,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 228,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- `events`:",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 236,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 5.3 Security Rules (Sketch)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 237,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 237,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```javascript",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 237,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 265,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 5.4 Cloud Functions",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 266,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 266,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **onCreate(`events`)**: Comp...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 274,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 6) Monetization Model",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 275,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 275,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Featured placements**: CPC...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 283,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 7) Success Metrics",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 284,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 284,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- DAU/WAU, event view→save rat...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 294,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 285",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      165
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 297,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Goal: Stabilize data model, ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 308,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 134",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      14
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 308,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Goal: Ship discovery, submis...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 324,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Goal: Provide organizers cap...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 338,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Goal: Launch payment flows, ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 352,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Goal: Improve retention and ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 359,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Unit & widget tests for new ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 364,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 220",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      100
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 364,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Implement an `interests` onb...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 367,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Adds `docs/phase-plan.md` (c...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 371,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      172,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 173,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/newlayoutplan.markdown.md",
+    "lineNumber": 371,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 172",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      52
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 193",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      73
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 6,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Home (Discover) feed with fe...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 17,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Can discover and search even...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 24,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Frontend: Flutter (single co...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 32,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "1. Week 1: Project scaffold, A...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 35,
+    "ruleNames": [
+      "MD029",
+      "ol-prefix"
+    ],
+    "ruleDescription": "Ordered list item prefix",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md029.md",
+    "errorDetail": "Expected: 4; Actual: 1; Style: 1/2/3",
+    "errorContext": null,
+    "errorRange": [
+      1,
+      3
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 36,
+    "ruleNames": [
+      "MD029",
+      "ol-prefix"
+    ],
+    "ruleDescription": "Ordered list item prefix",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md029.md",
+    "errorDetail": "Expected: 5; Actual: 1; Style: 1/2/3",
+    "errorContext": null,
+    "errorRange": [
+      1,
+      3
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 37,
+    "ruleNames": [
+      "MD029",
+      "ol-prefix"
+    ],
+    "ruleDescription": "Ordered list item prefix",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md029.md",
+    "errorDetail": "Expected: 6; Actual: 1; Style: 1/2/3",
+    "errorContext": null,
+    "errorRange": [
+      1,
+      3
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 40,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Scaffold Flutter app and int...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 47,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Create, submit, approve even...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 53,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Keep server timestamps autho...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-1-mvp.md",
+    "lineNumber": 55,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      82,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 83,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 154",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      34
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 6,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Organizer profiles: rich bio...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 16,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Add `organizer` fields for s...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 22,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Require additional verificat...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 27,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "1. Week 1–2: Organizer profile...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 34,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Add organizer subscription f...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 40,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Organizers can view analytic...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 45,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Consider using Stripe Connec...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-2-organizer-monetization.md",
+    "lineNumber": 47,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      61,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 62,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 6,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Web app launch (responsive) ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 15,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Add social graph collections...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 21,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "1. Weeks 1–4: Web app basics +...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 27,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Build web frontend: Flutter ...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 33,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Web event pages are crawlabl...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 38,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- For SEO, server-side renderi...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "docs/phase-3-scale-social-web.md",
+    "lineNumber": 39,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      77,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 78,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 225",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      105
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 7,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 1) Personas & Roles",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 8,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 8,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Guest:** Browse, search, f...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 16,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 2) Core User Flows (MVP)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 17,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 17,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "1. **Discover → Details → Save...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 32,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 45,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 46,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 48,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.2 Explore (Map + Filters)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 49,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 49,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 49,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 49,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 56,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 57,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 59,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 3.3 Event Details",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 60,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 60,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 60,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 60,
+    "ruleNames": [
+      "MD040",
+      "fenced-code-language"
+    ],
+    "ruleDescription": "Fenced code blocks should have a language specified",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md040.md",
+    "errorDetail": null,
+    "errorContext": "```",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 126,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 144",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      24
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 250,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### 5.4 Cloud Functions",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 251,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 251,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **onCreate(`events`)**: comp...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 259,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 6) Monetization Model (Optional)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 260,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 260,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Featured placements** (CPC...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 266,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 7) Success Metrics",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 267,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 267,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- DAU/WAU, event view→save rat...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 271,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 8) Tech Stack Options",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 272,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 272,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- **Frontend:** Flutter or Rea...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 280,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 9) Roadmap",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 281,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 282,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Home/Explore + search & filt...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 289,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Organizer profiles & bulk im...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 295,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Social graph (follow friends...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 301,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## Implementation phases",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 302,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 302,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 134",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      14
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 304,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 162",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      42
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 305,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 159",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      39
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 307,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 171",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      51
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 313,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 10) Sample Documents",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 314,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 314,
+    "ruleNames": [
+      "MD036",
+      "no-emphasis-as-heading",
+      "no-emphasis-as-header"
+    ],
+    "ruleDescription": "Emphasis used instead of a heading",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md036.md",
+    "errorDetail": null,
+    "errorContext": "events/{id}",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 315,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```json",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 315,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 335,
+    "ruleNames": [
+      "MD036",
+      "no-emphasis-as-heading",
+      "no-emphasis-as-header"
+    ],
+    "ruleDescription": "Emphasis used instead of a heading",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md036.md",
+    "errorDetail": null,
+    "errorContext": "users/{uid}/bookmarks/{eventId...",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 336,
+    "ruleNames": [
+      "MD031",
+      "blanks-around-fences"
+    ],
+    "ruleDescription": "Fenced code blocks should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md031.md",
+    "errorDetail": null,
+    "errorContext": "```json",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 336,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 342,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 11) Admin/Moderator UI Components (for Web Console)",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 343,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 343,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- DataGrid views with server-s...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 349,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 12) Testing & Quality",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 350,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 350,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Unit tests for form validati...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 356,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 13) Privacy & Safety",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 357,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 357,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- PII minimal; avoid storing e...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 363,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## 14) Implementation Notes & Tips",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 364,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 364,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 157",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      37
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 364,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Prefer **denormalization** f...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 371,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "### Deliverables Recap",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 372,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 372,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Wireframes (text) for MVP sc...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "event_app_2025_wireframes_flows_firestore_schema.md",
+    "lineNumber": 378,
+    "ruleNames": [
+      "MD012",
+      "no-multiple-blanks"
+    ],
+    "ruleDescription": "Multiple consecutive blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md012.md",
+    "errorDetail": "Expected: 1; Actual: 2",
+    "errorContext": null,
+    "errorRange": null,
+    "fixInfo": {
+      "deleteCount": -1
+    }
+  },
+  {
+    "fileName": "firebase/README.md",
+    "lineNumber": 12,
+    "ruleNames": [
+      "MD012",
+      "no-multiple-blanks"
+    ],
+    "ruleDescription": "Multiple consecutive blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md012.md",
+    "errorDetail": "Expected: 1; Actual: 2",
+    "errorContext": null,
+    "errorRange": null,
+    "fixInfo": {
+      "deleteCount": -1
+    }
+  },
+  {
+    "fileName": "mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+    "lineNumber": 10,
+    "ruleNames": [
+      "MD047",
+      "single-trailing-newline"
+    ],
+    "ruleDescription": "Files should end with a single newline character",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md047.md",
+    "errorDetail": null,
+    "errorContext": null,
+    "errorRange": [
+      11,
+      1
+    ],
+    "fixInfo": {
+      "editColumn": 12,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "mobile/README_ANDROID.md",
+    "lineNumber": 5,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 246",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      126
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/README_ANDROID.md",
+    "lineNumber": 20,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 149",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      29
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/README_ANDROID.md",
+    "lineNumber": 45,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 177",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      57
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/README_ICON.md",
+    "lineNumber": 22,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 184",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      64
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/README.md",
+    "lineNumber": 13,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 334",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      214
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/README.md",
+    "lineNumber": 17,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 177",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      57
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 3,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 289",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      169
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 5,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## Goals",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 6,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 6,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Ship the core event creation...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 10,
+    "ruleNames": [
+      "MD022",
+      "blanks-around-headings",
+      "blanks-around-headers"
+    ],
+    "ruleDescription": "Headings should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md022.md",
+    "errorDetail": "Expected: 1; Actual: 0; Below",
+    "errorContext": "## Pre-flight checks",
+    "errorRange": null,
+    "fixInfo": {
+      "lineNumber": 11,
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 11,
+    "ruleNames": [
+      "MD032",
+      "blanks-around-lists"
+    ],
+    "ruleDescription": "Lists should be surrounded by blank lines",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md032.md",
+    "errorDetail": null,
+    "errorContext": "- Ensure local Firebase config...",
+    "errorRange": null,
+    "fixInfo": {
+      "insertText": "\n"
+    }
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 53,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "# Phase 1 rollout checklist",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 53,
+    "ruleNames": [
+      "MD025",
+      "single-title",
+      "single-h1"
+    ],
+    "ruleDescription": "Multiple top-level headings in the same document",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md025.md",
+    "errorDetail": null,
+    "errorContext": "# Phase 1 rollout checklist",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 55,
+    "ruleNames": [
+      "MD013",
+      "line-length"
+    ],
+    "ruleDescription": "Line length",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md013.md",
+    "errorDetail": "Expected: 120; Actual: 289",
+    "errorContext": null,
+    "errorRange": [
+      121,
+      169
+    ],
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 57,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "## Goals",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 63,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "## Pre-flight checks",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 70,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "## Local verification commands",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 85,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "## Build artifacts",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "mobile/RELEASE_PHASE1.md",
+    "lineNumber": 105,
+    "ruleNames": [
+      "MD024",
+      "no-duplicate-heading",
+      "no-duplicate-header"
+    ],
+    "ruleDescription": "Multiple headings with the same content",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md024.md",
+    "errorDetail": null,
+    "errorContext": "## Release flow",
+    "errorRange": null,
+    "fixInfo": null
+  },
+  {
+    "fileName": "README_PR.md",
+    "lineNumber": 9,
+    "ruleNames": [
+      "MD029",
+      "ol-prefix"
+    ],
+    "ruleDescription": "Ordered list item prefix",
+    "ruleInformation": "https://github.com/DavidAnson/markdownlint/blob/v0.27.0/doc/md029.md",
+    "errorDetail": "Expected: 1; Actual: 2; Style: 1/1/1",
+    "errorContext": null,
+    "errorRange": [
+      1,
+      3
+    ],
+    "fixInfo": null
+  }
+]

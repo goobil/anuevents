@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../services/firestore_service.dart';
+// ...existing imports...
 import '../widgets/event_card.dart';
 import '../providers/auth_provider.dart';
 import 'account_screen.dart';
 import 'onboarding_interests_screen.dart';
+import 'submit_event_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,6 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
-  final FirestoreService _fs = FirestoreService();
   String _query = '';
 
   @override
@@ -67,7 +67,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
           Expanded(
             child: StreamBuilder(
-              stream: _fs.streamApprovedEvents(),
+              stream: ref.read(firestoreServiceProvider).streamApprovedEvents(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
@@ -139,6 +139,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SubmitEventScreen()));
+          if (res == true) {
+            setState(() {});
+          }
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

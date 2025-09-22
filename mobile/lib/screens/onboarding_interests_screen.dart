@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../services/firestore_service.dart';
 import '../providers/auth_provider.dart';
 
 class OnboardingInterestsScreen extends ConsumerStatefulWidget {
-  const OnboardingInterestsScreen({super.key});
+  const OnboardingInterestsScreen({Key? key}) : super(key: key);
+
+  static const routeName = '/onboarding/interests';
 
   @override
   ConsumerState<OnboardingInterestsScreen> createState() => _OnboardingInterestsScreenState();
@@ -45,16 +46,13 @@ class _OnboardingInterestsScreenState extends ConsumerState<OnboardingInterestsS
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: _saving ? null : () async {
+                onPressed: _saving || user == null ? null : () async {
                   final navigator = Navigator.of(context);
                   final messenger = ScaffoldMessenger.of(context);
-                  if (user == null) {
-                    messenger.showSnackBar(const SnackBar(content: Text('Sign in first')));
-                    return;
-                  }
                   setState(() => _saving = true);
                   try {
-                    await FirestoreService().saveUserInterests(user.uid, _selected.toList());
+                    final firestore = ref.read(firestoreServiceProvider);
+                    await firestore.saveUserInterests(user.uid, _selected.toList());
                     if (mounted) navigator.pop(true);
                   } catch (e) {
                     messenger.showSnackBar(SnackBar(content: Text('Failed to save: $e')));
@@ -62,7 +60,7 @@ class _OnboardingInterestsScreenState extends ConsumerState<OnboardingInterestsS
                     if (mounted) setState(() => _saving = false);
                   }
                 },
-                child: _saving ? const CircularProgressIndicator() : const Text('Save interests'),
+                child: _saving ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2)) : const Text('Save interests'),
               ),
             )
           ],

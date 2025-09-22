@@ -1,0 +1,35 @@
+name: Smoke Test (Firestore functions)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: firebase/functions
+        run: |
+          npm ci
+
+      - name: Install firebase-tools
+        run: npm install -g firebase-tools
+
+      - name: Run smoke test
+        working-directory: firebase/functions
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GCLOUD_PROJECT: anuevents-1f30d
+        run: |
+          # Ensure the token is valid
+          firebase projects:list --token "$FIREBASE_TOKEN" --quiet
+          # Run the smoke test which uses the Admin SDK and will use the token
+          node smoke_test.js

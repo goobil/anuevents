@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/event.dart';
 import 'package:intl/intl.dart';
 import '../providers/auth_provider.dart';
+import '../screens/event_detail_screen.dart';
 import '../providers/bookmarks_provider.dart';
 // ...existing code...
 
@@ -23,7 +24,11 @@ class EventCard extends ConsumerWidget {
       child: ListTile(
         title: Text(event.title),
         subtitle: Text('${df.format(event.startsAt)} • ${event.location}'),
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => EventDetailScreen(event: event)),
+          );
+        },
         trailing: IconButton(
           icon: Icon(isSaved ? Icons.bookmark : Icons.bookmark_border),
           onPressed: user == null
