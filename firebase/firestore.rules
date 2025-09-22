@@ -56,6 +56,28 @@ service cloud.firestore {
         && ( request.resource == null || (request.resource.data.keys().hasOnly(['eventId','createdAt']) && request.resource.data.eventId is string) );
     }
 
+    // User profiles / prefs: allow users to read/update their own preferences
+    // Only allow changes to the `prefs` map containing well-typed fields we expect
+    match /users/{userId} {
+      allow read: if isSignedIn() && request.auth.uid == userId;
+
+      allow create, update: if isSignedIn() && request.auth.uid == userId
+        // Only allow writes that are either merging a prefs map or deleting (null)
+        && (
+          request.resource == null
+          || (
+            request.resource.data.keys().hasOnly(['prefs'])
+            && request.resource.data.prefs is map
+            && (
+              // travelInterests, if present, must be an array of strings
+              (!('travelInterests' in request.resource.data.prefs) || request.resource.data.prefs.travelInterests is list && request.resource.data.prefs.travelInterests.size() >= 0 && request.resource.data.prefs.travelInterests.every(x -> x is string))
+              // onboardingCompleted, if present, must be boolean
+              && (!('onboardingCompleted' in request.resource.data.prefs) || request.resource.data.prefs.onboardingCompleted is bool)
+            )
+          )
+        );
+    }
+
     // Featured slots: read public, writes only by moderators
     match /featuredSlots/{id} {
       allow read: if true;
