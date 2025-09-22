@@ -3,6 +3,7 @@
 Goal: Build the minimal, high-quality mobile experience that enables discovery, event details, event submission with moderation, saved events and reminders, and the moderator/admin back-office.
 
 Scope & Deliverables
+
 - Home (Discover) feed with featured carousel and local feed
 - Explore: map view with pins and list view + filters (date, category, distance, price)
 - Event Details: poster, date/time, venue, tickets, organizer preview, share, save, report
@@ -28,7 +29,9 @@ Architecture & Implementation Notes
 - Implement server-side slug mapping to ensure shareable and relatively stable URLs
 - Use geofirex or geohash-based bounding box approach for radius queries
 
+
 Milestones & Timeline (4–6 weeks)
+
 1. Week 1: Project scaffold, Auth, Firestore basics, Home feed prototype
 2. Week 2: Event details, bookmarks, basic search & filters
 3. Week 3: Submit flow + media uploads + moderator queue
@@ -37,6 +40,7 @@ Milestones & Timeline (4–6 weeks)
 6. Week 6: Buffer for bug fixes and performance tuning
 
 Developer tasks (first sprint)
+
 - Scaffold Flutter app and integrate Firebase packages
 - Implement Auth flows and profile screen
 - Build Firestore models and rules in emulator
@@ -44,12 +48,14 @@ Developer tasks (first sprint)
 - Wire submit stepper UI and backend submission path
 
 QA checklist (smoke tests)
+
 - Create, submit, approve event flow
 - Save event and receive 24h/1h reminder
 - Map radius search returns expected results within X km
 - Moderator cannot change protected fields via client
 
 Notes
+
 - Keep server timestamps authoritative for createdAt/updatedAt
 - Use small poster thumbnails for feed lists to reduce bandwidth
 - Start with coarse price tiers but add numeric price fields in schema for Phase 2
