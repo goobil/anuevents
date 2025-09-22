@@ -7,6 +7,7 @@ class Event {
   final DateTime startsAt;
   final String status;
   final String location;
+  final List<String> tagIds;
 
   Event({
     required this.id,
@@ -15,6 +16,7 @@ class Event {
     required this.startsAt,
     required this.status,
     required this.location,
+    required this.tagIds,
   });
 
   factory Event.fromFirestore(DocumentSnapshot doc) {
@@ -26,6 +28,7 @@ class Event {
       startsAt: (data['startsAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
       status: data['status'] ?? 'pending',
       location: data['location'] ?? '',
+      tagIds: List<String>.from(data['tagIds'] ?? []),
     );
   }
 }

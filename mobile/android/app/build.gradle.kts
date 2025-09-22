@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.anuevents_mobile"
+    namespace = "com.goobil.anuevents"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.anuevents_mobile"
+    applicationId = "com.goobil.anuevents"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

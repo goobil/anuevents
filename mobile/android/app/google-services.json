@@ -12,7 +12,12 @@
           "package_name": "com.goobil.anuevents"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "563497241493-ds5h91elj88sh2lag3nu7glhd34q5936.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBXQOqKGpAFA8m0jMxK-b5DWW6szPZPNvo"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563497241493-ds5h91elj88sh2lag3nu7glhd34q5936.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "563497241493-im5q536maqs4cuvbkdq9abcu5ou06oer.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.goobil.anuevents"
+              }
+            }
+          ]
         }
       }
     }
