@@ -6,7 +6,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "deploy": "firebase deploy --only functions --project production"
+    "deploy": "firebase deploy --only functions --project production",
+    "set-claim": "node ./scripts/setCustomClaim.js"
   },
   "dependencies": {
     "@google-cloud/storage": "^6.9.0",
