@@ -1,0 +1,185 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+// ...existing imports...
+import '../widgets/event_card.dart';
+import '../providers/auth_provider.dart';
+import 'account_screen.dart';
+import 'onboarding_interests_screen.dart';
+import 'submit_event_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class HomeScreen extends ConsumerStatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  String _query = '';
+  bool _onboardingPrompted = false;
+
+  Future<bool> _shouldPromptOnboarding(String? uid, bool profileOnboardingCompleted) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final local = prefs.getBool('onboardingCompleted_local') ?? false;
+      if (local) return false;
+    } catch (_) {
+      // ignore local prefs failure
+    }
+    return !profileOnboardingCompleted;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('ANU Events'), actions: [
+        PopupMenuButton<String>(
+          onSelected: (v) async {
+            if (v == 'account') {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AccountScreen()));
+            } else if (v == 'signout') {
+              await ref.read(authServiceProvider).signOut();
+            }
+          },
+          itemBuilder: (_) => const [
+            PopupMenuItem(value: 'account', child: Text('Account')),
+            PopupMenuItem(value: 'signout', child: Text('Sign out')),
+          ],
+        )
+      ]),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Search events',
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (v) => setState(() => _query = v),
+            ),
+          ),
+          // category chips placeholder
+          SizedBox(
+            height: 48,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              children: const [
+                Chip(label: Text('All')),
+                SizedBox(width: 8),
+                Chip(label: Text('Music')),
+                SizedBox(width: 8),
+                Chip(label: Text('Community')),
+                SizedBox(width: 8),
+                Chip(label: Text('Sports')),
+              ],
+            ),
+          ),
+          Expanded(
+            child: StreamBuilder(
+              stream: ref.read(firestoreServiceProvider).streamApprovedEvents(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                final events = snapshot.data ?? [];
+                // fetch user interests and compute simple client-side recommendations
+                final user = ref.watch(currentUserProvider);
+                List<String> interests = [];
+                if (user != null) {
+                  final profile = ref.watch(userProfileProvider(user.uid)).asData?.value;
+                  interests = profile?.travelInterests ?? [];
+                  // If user has no interests and we haven't prompted yet, show onboarding once
+                  if (!_onboardingPrompted && (interests.isEmpty)) {
+                    final onboardingDone = profile?.onboardingCompleted ?? false;
+                    // consult local pref and profile value; avoid awaiting directly in build
+                    WidgetsBinding.instance.addPostFrameCallback((_) async {
+                      final shouldPrompt = await _shouldPromptOnboarding(user.uid, onboardingDone);
+                      if (shouldPrompt && !_onboardingPrompted) {
+                        _onboardingPrompted = true;
+                        if (!mounted) return;
+                        // Navigator needs a BuildContext here; we've guarded with mounted checks above/below.
+                        // The analyzer may still warn about using BuildContext across async gaps — ignore for this guarded use.
+                        // ignore: use_build_context_synchronously
+                        final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingInterestsScreen()));
+                        if (!mounted) return;
+                        if (res == true) setState(() {});
+                      }
+                    });
+                  }
+                }
+                // score events by tag intersection with interests
+                List eventsScored = events.map((e) {
+                  final tags = (e.tagIds).cast<String>();
+                  final score = tags.where((t) => interests.contains(t)).length;
+                  return {'event': e, 'score': score};
+                }).toList();
+                eventsScored.sort((a, b) => (b['score'] as int).compareTo(a['score'] as int));
+                final scoredEvents = eventsScored.map((s) => s['event'] as dynamic).toList();
+                final displayList = _query.isEmpty ? scoredEvents : scoredEvents.where((e) => (e.title as String).toLowerCase().contains(_query.toLowerCase())).toList();
+                final filtered = _query.isEmpty
+                    ? events
+                    : events
+                        .where((e) => e.title.toLowerCase().contains(_query.toLowerCase()))
+                        .toList();
+                if (filtered.isEmpty) {
+                  return const Center(child: Text('No events found'));
+                }
+                return ListView.builder(
+                  itemCount: displayList.length + 1,
+                  itemBuilder: (context, i) {
+                    if (i == 0) {
+                      // Recommended strip
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text('Recommended for you', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                                TextButton(
+                                  onPressed: () async {
+                                    final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingInterestsScreen()));
+                                    if (res == true) setState(() {});
+                                  },
+                                  child: const Text('Edit'),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 140,
+                              child: ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: displayList.take(10).map((e) => SizedBox(width: 260, child: EventCard(event: e))).toList(),
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    }
+                    final ev = displayList[i - 1];
+                    return EventCard(event: ev);
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final res = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SubmitEventScreen()));
+          if (res == true) {
+            setState(() {});
+          }
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
