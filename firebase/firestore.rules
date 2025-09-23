@@ -1,0 +1,92 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper checks
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isModerator() {
+      return isSignedIn() && request.auth.token.role in ['moderator','admin'];
+    }
+
+    function isOwner() {
+      return isSignedIn() && resource != null && resource.data.createdBy == request.auth.uid;
+    }
+
+    // Events collection
+    // - Public reads are allowed for approved events
+    // - Creators may create events but cannot set server-managed fields (createdAt, status, moderation fields)
+    // - Creators can update their own events while they're not approved, but cannot change protected fields
+    // - Moderators (and admins) may read/write freely
+    match /events/{eventId} {
+      allow read: if resource.data.status == 'approved' || isOwner() || isModerator();
+
+      allow create: if isSignedIn()
+        // creator must be the authenticated user
+        && request.resource.data.createdBy == request.auth.uid
+        // new events must start in 'pending' state (only moderators may set other states)
+        && request.resource.data.status == 'pending'
+        // clients must not set server-managed fields
+        && !(request.resource.data.keys().hasAny(['createdAt','approvedAt','moderatorId','statusHistory','moderationNotes']))
+        // basic type checks
+        && request.resource.data.title is string
+        && request.resource.data.description is string
+        && request.resource.data.startsAt is timestamp
+        && ( !('posterUrl' in request.resource.data) || request.resource.data.posterUrl is string )
+        && ( !('location' in request.resource.data) || request.resource.data.location is string );
+
+      allow update: if isModerator()
+        || (
+          // owner may update while not approved
+          isSignedIn()
+          && resource.data.createdBy == request.auth.uid
+          && resource.data.status != 'approved'
+          // owners may not set protected/server fields
+          && !(request.resource.data.keys().hasAny(['createdAt','status','approvedAt','moderatorId','createdBy','statusHistory','moderationNotes']))
+        );
+
+      allow delete: if isModerator() || (isSignedIn() && resource.data.createdBy == request.auth.uid && resource.data.status != 'approved');
+    }
+
+    // User bookmarks: only the owning user may read/write their bookmarks
+    match /users/{userId}/bookmarks/{bookmarkId} {
+      allow read, write: if isSignedIn() && request.auth.uid == userId
+        // simple validation: bookmark must reference an event id
+        && ( request.resource == null || (request.resource.data.keys().hasOnly(['eventId','createdAt']) && request.resource.data.eventId is string) );
+    }
+
+    // User profiles / prefs: allow users to read/update their own preferences
+    // Only allow changes to the `prefs` map containing well-typed fields we expect
+    match /users/{userId} {
+      allow read: if isSignedIn() && request.auth.uid == userId;
+
+      allow create, update: if isSignedIn() && request.auth.uid == userId
+        // Only allow writes that are either merging a prefs map or deleting (null)
+        && (
+          request.resource == null
+          || (
+            request.resource.data.keys().hasOnly(['prefs'])
+            && request.resource.data.prefs is map
+            && (
+              // travelInterests, if present, must be a list (elements validated elsewhere if needed)
+              (!('travelInterests' in request.resource.data.prefs) || request.resource.data.prefs.travelInterests is list)
+              // onboardingCompleted, if present, must be boolean
+              && (!('onboardingCompleted' in request.resource.data.prefs) || request.resource.data.prefs.onboardingCompleted is bool)
+            )
+          )
+        );
+    }
+
+    // Featured slots: read public, writes only by moderators
+    match /featuredSlots/{id} {
+      allow read: if true;
+      allow write: if isModerator();
+    }
+
+    // Default deny for everything else
+    match /{documents=**} {
+      allow read, write: if false;
+    }
+  }
+}
