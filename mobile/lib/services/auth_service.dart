@@ -110,7 +110,7 @@ class AuthService {
     }
 
   final auth = account.authentication;
-    final idToken = auth.idToken;
+  final idToken = auth.idToken;
     if (idToken == null || idToken.isEmpty) {
       throw FirebaseAuthException(
         code: 'missing-google-id-token',
