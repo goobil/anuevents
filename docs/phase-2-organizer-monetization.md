@@ -3,11 +3,6 @@
 Goal: Add deeper organizer features, monetization channels, and productivity tools that allow
 organizers to manage events at scale and pay for promotions.
 
-# Phase 2 — Organizer Tools & Monetization (6–10 weeks)
-
-Goal: Add deeper organizer features, monetization channels, and productivity tools that allow
-organizers to manage events at scale and pay for promotions.
-
 Scope & Deliverables
 
 - Organizer profiles: rich bio, social links, analytics dashboard

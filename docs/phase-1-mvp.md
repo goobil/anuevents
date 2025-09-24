@@ -191,6 +191,43 @@ Architecture & Implementation Notes
 - Denormalize small snapshots on `events` (categoryName, organizerName, venueName, posterThumb) for
 	efficient lists.
 - Implement server-side slug mapping to ensure shareable and stable URLs.
+
+# Phase 1 — MVP (4–6 weeks)
+
+Goal
+
+Build the minimal, high-quality mobile experience that enables discovery, event details, event
+submission with moderation, saved events and reminders, and a moderator/admin back office.
+
+Scope & Deliverables
+
+- Home (Discover) feed with featured carousel and local feed
+- Explore: map view with pins and list view, plus filters (date, category, distance, price)
+- Event Details: poster, date/time, venue, tickets, organizer preview, share, save, report
+- Submit Event flow: 6-step stepper with save-draft, media upload to Firebase Storage, validations
+- Authentication: email/password, Google Sign-In, and Apple Sign-In (iOS)
+- Saved events & reminders (24h & 1h default)
+- Moderator Queue: approve/reject/edit; admin console with featured slot management
+- Firestore + Firebase Storage + Cloud Functions for background jobs
+- Basic analytics: event views, saves, ticket clicks (use sharded counters or safe increments)
+
+Acceptance Criteria
+
+- Discover and search events by keyword, category, date range, and distance
+- Authenticated users can submit events and see pending status in their profile
+- Moderators can approve/reject submissions and approved events become public
+- Users can save events and receive scheduled push reminders
+- Media uploads stored and served from Firebase Storage with appropriate rules for approved images
+
+Architecture & Implementation Notes
+
+- Frontend: Flutter (single codebase for iOS & Android). Use Provider/riverpod or Bloc for state
+  management.
+- Backend: Firebase (Firestore, Storage, Auth, Cloud Functions, FCM).
+- Use a single `events` collection with a `status` field for moderation (pending/approved/rejected).
+- Denormalize small snapshots on `events` (categoryName, organizerName, venueName, posterThumb) for
+  efficient lists.
+- Implement server-side slug mapping to ensure shareable and stable URLs.
 - Use a geohash or bounding-box approach for radius queries.
 
 Milestones & Timeline (4–6 weeks)
