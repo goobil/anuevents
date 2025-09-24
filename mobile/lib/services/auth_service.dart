@@ -63,7 +63,7 @@ class AuthService {
     }
 
   // idToken is available via account.authentication
-  final auth = account.authentication;
+    final auth = account.authentication;
     final idToken = auth.idToken;
     // Defensive check: idToken is required to create a Firebase credential.
     if (idToken == null || idToken.isEmpty) {
