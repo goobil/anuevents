@@ -99,12 +99,12 @@ class FirestoreService {
   Future<List<Event>> searchByTitle(String q, {int limit = 20}) async {
     if (q.isEmpty) return [];
   final snap = await _firestore
-        .collection('events')
-        .where('status', isEqualTo: 'approved')
-        .orderBy('title')
-        .startAt([q]).endAt(['$q\uf8ff']).limit(limit)
-        .get();
-    return snap.docs.map((d) => Event.fromFirestore(d)).toList();
+      .collection('events')
+      .where('status', isEqualTo: 'approved')
+      .orderBy('title')
+      .startAt([q]).endAt(['$q\uf8ff']).limit(limit)
+      .get();
+  return snap.docs.map((d) => Event.fromFirestore(d)).toList();
   }
 
   // placeholder for poster upload metadata handling
