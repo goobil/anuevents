@@ -38,6 +38,23 @@ class FirestoreService {
     }
   }
 
+  /// Save a partial draft to users/{userId}/drafts. Returns the created draft DocumentReference.
+  Future<DocumentReference> saveDraftEvent(String userId, Map<String, dynamic> payload) async {
+    try {
+      final ref = await _firestore.collection('users').doc(userId).collection('drafts').add({
+        ...payload,
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+      // ignore: avoid_print
+      print('FirestoreService.saveDraftEvent: saved draft ${ref.id} for user $userId');
+      return ref;
+    } catch (e) {
+      // ignore: avoid_print
+      print('FirestoreService.saveDraftEvent: failed to save draft: $e');
+      rethrow;
+    }
+  }
+
   // Alias to create a draft/pending event with same semantics
   Future<DocumentReference> createDraftEvent(Map<String, dynamic> payload) async {
     return createEvent(payload);
@@ -57,13 +74,17 @@ class FirestoreService {
   }
 
   // Toggle save/bookmark for a user
-  Future<void> toggleSaveEvent(String userId, String eventId) async {
+  /// Toggle save/bookmark for a user. Returns `true` if the event is now saved,
+  /// or `false` if it was removed.
+  Future<bool> toggleSaveEvent(String userId, String eventId) async {
     final ref = _firestore.collection('users').doc(userId).collection('saved').doc(eventId);
     final snap = await ref.get();
     if (snap.exists) {
       await ref.delete();
+      return false;
     } else {
       await ref.set({'savedAt': FieldValue.serverTimestamp()});
+      return true;
     }
   }
 

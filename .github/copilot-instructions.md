@@ -1,0 +1,1 @@
+Always align suggestions with instructions.md checklists. Prioritize Firebase best practices, small PRs, and emulator testing.

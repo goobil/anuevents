@@ -10,7 +10,10 @@ import '../services/storage_service.dart';
 // ignore_for_file: use_build_context_synchronously
 
 class SubmitEventScreen extends ConsumerStatefulWidget {
-  const SubmitEventScreen({super.key});
+  final String? draftId;
+  final Map<String, dynamic>? draftData;
+
+  const SubmitEventScreen({super.key, this.draftId, this.draftData});
 
   @override
   ConsumerState<SubmitEventScreen> createState() => _SubmitEventScreenState();
@@ -20,12 +23,12 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
   int _step = 0;
   final _formKey = GlobalKey<FormState>();
 
-  // temporary form state
-  String title = '';
-  String description = '';
+  // form controllers
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
   DateTime? startsAt;
-  String location = '';
-  String category = '';
+  final TextEditingController _locationController = TextEditingController();
+  final TextEditingController _categoryController = TextEditingController();
   String posterUrl = '';
   double uploadProgress = 0.0;
   bool uploadFailed = false;
@@ -41,7 +44,15 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
   Widget build(BuildContext context) {
     final user = ref.watch(currentUserProvider);
     return Scaffold(
-      appBar: AppBar(title: const Text('Submit Event')),
+      appBar: AppBar(title: const Text('Submit Event'), actions: [
+        IconButton(
+          tooltip: 'Save draft',
+          icon: const Icon(Icons.save),
+          onPressed: () async {
+            await _saveDraft();
+          },
+        ),
+      ]),
       body: user == null
           ? const Center(child: Text('Please sign in to submit an event'))
           : Form(
@@ -52,17 +63,17 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
                 onStepCancel: _prevStep,
                 steps: [
                   Step(title: const Text('Basic'), content: Column(children: [
-                    TextFormField(decoration: const InputDecoration(labelText: 'Title'), onSaved: (v) => title = v ?? ''),
-                    TextFormField(decoration: const InputDecoration(labelText: 'Description'), onSaved: (v) => description = v ?? ''),
+                    TextFormField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title'), validator: (v) => (v==null || v.isEmpty) ? 'Please enter title' : null),
+                    TextFormField(controller: _descriptionController, decoration: const InputDecoration(labelText: 'Description'), maxLines: 4),
                   ])),
                   Step(title: const Text('When'), content: Column(children: [
                     ListTile(title: Text(startsAt == null ? 'Pick date/time' : startsAt!.toString()), onTap: _pickDateTime),
                   ])),
                   Step(title: const Text('Where'), content: Column(children: [
-                    TextFormField(decoration: const InputDecoration(labelText: 'Location'), onSaved: (v) => location = v ?? ''),
+                    TextFormField(controller: _locationController, decoration: const InputDecoration(labelText: 'Location')),
                   ])),
                   Step(title: const Text('Category'), content: Column(children: [
-                    TextFormField(decoration: const InputDecoration(labelText: 'Category'), onSaved: (v) => category = v ?? ''),
+                    TextFormField(controller: _categoryController, decoration: const InputDecoration(labelText: 'Category')),
                   ])),
                   Step(title: const Text('Poster'), content: Column(children: [
                     if (_pickedBytes == null) ...[
@@ -97,18 +108,38 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
                     ]
                   ])),
                   Step(title: const Text('Review'), content: Column(children: [
-                    Text('Title: $title'),
+                    Text('Title: ${_titleController.text}'),
                     Text('When: ${startsAt?.toString() ?? 'n/a'}'),
-                    Text('Where: $location'),
-                    Text('Category: $category'),
+                    Text('Where: ${_locationController.text}'),
+                    Text('Category: ${_categoryController.text}'),
                     Text('Poster: $posterUrl'),
                     const SizedBox(height: 12),
-                    ElevatedButton(onPressed: _submitDraft, child: const Text('Submit (saves as pending)'))
+                    Row(children: [
+                      ElevatedButton(onPressed: _submitDraft, child: const Text('Submit (saves as pending)')),
+                      const SizedBox(width: 12),
+                      ElevatedButton(onPressed: _saveDraft, child: const Text('Save draft')),
+                    ])
                   ])),
                 ],
               ),
             ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // If a draft was provided, prefill controllers
+    final draft = widget.draftData;
+    if (draft != null) {
+      _titleController.text = draft['title'] ?? '';
+      _descriptionController.text = draft['description'] ?? '';
+      final ts = draft['startsAt'];
+      if (ts is Timestamp) startsAt = ts.toDate();
+      _locationController.text = draft['location'] ?? '';
+      _categoryController.text = draft['categoryName'] ?? '';
+      posterUrl = draft['posterUrl'] ?? '';
+    }
   }
 
   void _nextStep() {
@@ -181,15 +212,19 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
       return;
     }
 
-    _formKey.currentState?.save();
+    if (!_formKey.currentState!.validate()) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please fix the validation errors')));
+      return;
+    }
+
     final fs = ref.read(firestoreServiceProvider);
     final Map<String, dynamic> payload = {
-      'title': title,
-      'description': description,
+      'title': _titleController.text,
+      'description': _descriptionController.text,
       // write startsAt as a Firestore Timestamp if present
       if (startsAt != null) 'startsAt': Timestamp.fromDate(startsAt!),
-      'location': location,
-      'categoryName': category,
+      'location': _locationController.text,
+      'categoryName': _categoryController.text,
       'posterUrl': posterUrl,
       // Do not set server-managed fields like status/createdAt here.
       // The rules require `createdBy` to equal the auth uid on create.
@@ -204,6 +239,32 @@ class _SubmitEventScreenState extends ConsumerState<SubmitEventScreen> {
       }
     } catch (e) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to submit event: $e')));
+    }
+  }
+
+  Future<void> _saveDraft() async {
+    final user = ref.read(currentUserProvider);
+    if (user == null) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please sign in to save a draft')));
+      return;
+    }
+
+    final fs = ref.read(firestoreServiceProvider);
+    final payload = {
+      'title': _titleController.text,
+      'description': _descriptionController.text,
+      if (startsAt != null) 'startsAt': Timestamp.fromDate(startsAt!),
+      'location': _locationController.text,
+      'categoryName': _categoryController.text,
+      'posterUrl': posterUrl,
+      'lastStep': _step,
+    };
+
+    try {
+      await fs.saveDraftEvent(user.uid, payload);
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Draft saved')));
+    } catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to save draft: $e')));
     }
   }
 }
