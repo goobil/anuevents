@@ -1,0 +1,13 @@
+name: flutter_local_notifications
+description: Vendored minimal copy for local development (patched)
+version: 12.0.4-vendored
+homepage: https://pub.dev/packages/flutter_local_notifications
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.dexterous.flutterlocalnotifications
+        pluginClass: FlutterLocalNotificationsPlugin
