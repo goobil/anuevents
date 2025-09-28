@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies (functions)
         working-directory: ./functions
         run: |
-          npm ci
+          npm install --no-audit --no-fund
 
       - name: Run rules tests with emulator
         working-directory: ./functions
