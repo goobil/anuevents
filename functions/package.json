@@ -10,7 +10,7 @@
     "firebase-functions": "^4.0.0"
   },
   "devDependencies": {
-    "@firebase/rules-unit-testing": "3.2.0",
+    "@firebase/rules-unit-testing": "^2.4.0",
     "mocha": "10.2.0",
     "chai": "4.3.7",
     "firebase-tools": "11.30.1"
