@@ -1,0 +1,32 @@
+name: Firestore Rules Tests
+
+on:
+  push:
+    branches: [ main, feature/** ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  rules-tests:
+    name: Run Firestore rules unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (functions)
+        working-directory: ./functions
+        run: |
+          npm ci
+
+      - name: Run rules tests with emulator
+        working-directory: ./functions
+        env:
+          GCLOUD_PROJECT: anuevents-testing
+        run: |
+          npx firebase emulators:exec --project $GCLOUD_PROJECT "npm run test:rules"
