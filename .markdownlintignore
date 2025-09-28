@@ -1,0 +1,5 @@
+# Ignore generated docs and large vendor folders
+node_modules/
+Pods/
+build/
+.mobile/
